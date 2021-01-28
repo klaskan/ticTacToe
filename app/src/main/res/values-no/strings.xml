@@ -1,9 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Bondesjakk</string>
     <string name="game_name">Bondesjakk</string>
     <string name="play_button">Spill av</string>
     <string name="stop_button">Stopp</string>
     <string name="player_x">Spiller X</string>
-    <string name="player_o">Spiller O</string>
-
+    <string name="player_o">"Spiller O "</string>
 </resources>
