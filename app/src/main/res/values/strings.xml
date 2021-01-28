@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Bondesjakk</string>
+    <string name="game_name">Bondesjakk</string>
+    <string name="play_button">Spill av</string>
+    <string name="stop_button">Stopp</string>
+
 </resources>
