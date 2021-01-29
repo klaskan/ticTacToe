@@ -6,4 +6,8 @@
     <string name="stop_button">Stop</string>
     <string name="player_x">Player X</string>
     <string name="player_o">Player O</string>
+    <string name="result">Result:</string>
+    <string name="spill_en_vinner">Player X is the winner!</string>
+    <string name="spiller_to_vinner">Player O is th Winner!</string>
+    <string name="uavgjort">Draw</string>
 </resources>

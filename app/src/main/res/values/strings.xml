@@ -5,5 +5,9 @@
     <string name="stop_button">Stopp</string>
     <string name="player_x">Spiller X</string>
     <string name="player_o">Spiller O</string>
+    <string name="result">Resultat:</string>
+    <string name="spill_en_vinner">Spiller X Vinner!</string>
+    <string name="spiller_to_vinner">Spiller O Vinner!</string>
+    <string name="uavgjort">Uavgjort</string>
 
 </resources>

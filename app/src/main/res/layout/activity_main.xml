@@ -30,28 +30,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="playerTap"
-                android:tag="0"
                 android:background="@drawable/image_border"
-                />
+                android:onClick="playerTap"
+                android:tag="0" />
 
             <ImageView
                 android:id="@+id/imageView1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/image_border"
                 android:onClick="playerTap"
-                android:tag="1"
-                android:background="@drawable/image_border"/>
+                android:tag="1" />
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/image_border"
                 android:onClick="playerTap"
-                android:tag="2"
-                android:background="@drawable/image_border"/>
+                android:tag="2" />
         </LinearLayout>
 
         <LinearLayout
@@ -65,27 +64,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/image_border"
                 android:onClick="playerTap"
-                android:tag="3"
-                android:background="@drawable/image_border"/>
+                android:tag="3" />
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/image_border"
                 android:onClick="playerTap"
-                android:tag="4"
-                android:background="@drawable/image_border"/>
+                android:tag="4" />
 
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/image_border"
                 android:onClick="playerTap"
-                android:tag="5"
-                android:background="@drawable/image_border"/>
+                android:tag="5" />
         </LinearLayout>
 
         <LinearLayout
@@ -99,43 +98,59 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/image_border"
                 android:onClick="playerTap"
-                android:tag="6"
-                android:background="@drawable/image_border"/>
+                android:tag="6" />
 
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/image_border"
                 android:onClick="playerTap"
-                android:tag="7"
-                android:background="@drawable/image_border"/>
+                android:tag="7" />
 
             <ImageView
                 android:id="@+id/imageView8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/image_border"
                 android:onClick="playerTap"
-                android:tag="8"
-                android:background="@drawable/image_border"/>
+                android:tag="8" />
         </LinearLayout>
     </LinearLayout>
 
     <!--game status text display-->
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15sp"
+        android:textSize="28sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.513" />
+
     <TextView
         android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15sp"
-        android:text=""
         android:textSize="28sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.782" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -168,6 +183,7 @@
                 android:layout_height="45dp"
                 android:background="?attr/colorPrimary"
                 android:contentDescription="@string/play_button"
+                android:onClick="playButtonTapped"
                 android:scaleType="fitStart"
                 android:src="@drawable/ic_baseline_play_circle_outline_24"
                 android:visibility="visible"
@@ -176,14 +192,14 @@
                 app:layout_constraintHorizontal_bias="0.745"
                 app:layout_constraintStart_toStartOf="@+id/myToolbar"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.555"
-                android:onClick="playButtonTapped"/>
+                app:layout_constraintVertical_bias="0.555" />
 
             <ImageButton
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:background="?attr/colorPrimary"
                 android:contentDescription="@string/stop_button"
+                android:onClick="gameReset"
                 android:scaleType="fitStart"
                 android:src="@drawable/ic_baseline_stop_circle_24"
                 android:visibility="visible"
@@ -192,8 +208,7 @@
                 app:layout_constraintHorizontal_bias="0.354"
                 app:layout_constraintStart_toEndOf="@+id/imageButton"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.555"
-                android:onClick="gameReset"/>
+                app:layout_constraintVertical_bias="0.555" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -204,12 +219,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginBottom="220dp"
+        android:background="@drawable/text_border"
+        android:padding="10sp"
         android:text="@string/player_x"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/text_border"
-        android:padding="10sp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/playero"
@@ -217,11 +232,30 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="220dp"
+        android:background="@drawable/text_border"
+        android:padding="10sp"
         android:text="@string/player_o"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/text_border"
-        android:padding="10sp"/>
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/result"/>
+
+    <TextView
+        android:id="@+id/timeScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resultText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
