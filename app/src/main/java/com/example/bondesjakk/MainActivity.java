@@ -1,9 +1,7 @@
 package com.example.bondesjakk;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -16,7 +14,6 @@ import java.util.TimerTask;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    //flags
     boolean gameActive = true;
     boolean playButtonPressed = false;
 
@@ -34,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     List<Double> sumTimerx = new ArrayList<Double>();
     List<Double> sumTimerO = new ArrayList<Double>();
 
-    //Starts timer for player X
+
     public void startTimerX() {
         timerX.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -53,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 0, 1000);
     }
-    //Starts timer for player X
+
     public void startTimerO() {
         timerO.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -74,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //Calculates
+
     private String getTimerText(double timeHere, double progress){
         int rounded = (int) Math.round(timeHere + progress);
         int seconds = ((rounded % 86400) % 3600) % 60;
@@ -86,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private String calculateTimeScore(List<Double> timeX, List<Double> timeO){
+
         //Finds SUM in list of time values.
         double sumX = 0;
         for(Double i : timeX)
@@ -121,16 +119,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // Players
+    // Player representation
     // 0 == X
     // 1 == O
     int activePlayer = 0;
     int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2};
 
-    // State meanings:
-    //    0 - X
-    //    1 - O
-    //    2 - Null
+    // Different states on the board
+    // 0 == X
+    // 1 == O
+    // 2 == Null/empty
     // put all win positions in a 2D array
     int[][] winPositions = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8},
                             {0, 3, 6}, {1, 4, 7}, {2, 5, 8},
@@ -150,13 +148,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    // Call when players tap in an empty box of the grid
+    // this function will be called every time a
+    // players tap in an empty box of the grid
     public void playerTap(View view) {
-        //Press the playbutton to able to play!
+        //Press the playbutton to able to play
+
         if (!playButtonPressed){
             return;
         }
+
 
         //Image button
         ImageView img = (ImageView) view;
@@ -358,7 +358,11 @@ public class MainActivity extends AppCompatActivity {
         //need a start time
         sumTimerx.add(0.0);
         sumTimerO.add(0.0);
-
+        textUpdateScore.setText("00:00:00");
     }
+
+
+
+
 
 }
